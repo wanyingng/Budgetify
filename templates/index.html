@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Expenses - Budgetify
+{% endblock %}
+
+{% block main %}
+
+    {% for expense in expenses %}
+        {{ expense.date }} -> {{ expense.name }} -> {{ expense.amount }} -> {{ expense.category }}
+    {% endfor %}
+{% endblock %}
