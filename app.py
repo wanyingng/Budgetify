@@ -31,7 +31,23 @@ class Expenses(db.Model):
 def index():
     """Show records of expenses"""
     expenses = Expenses.query.all()
-    return render_template('index.html', expenses=expenses)
+    total = 0
+    t_food = 0
+    t_entertainment = 0
+    t_business = 0
+    t_other = 0
+    # Calculate the overall total and total for each category
+    for expense in expenses:
+        total += expense.amount
+        if expense.category == 'Food':
+            t_food += expense.amount
+        elif expense.category == 'Entertainment':
+            t_entertainment += expense.amount
+        elif expense.category == 'Business':
+            t_business += expense.amount
+        elif expense.category == 'Other':
+            t_other += expense.amount
+    return render_template('index.html', expenses=expenses, total=total, t_food=t_food, t_entertainment=t_entertainment, t_business=t_business, t_other=t_other)
 
 
 @app.route('/addexpense', methods=['GET', 'POST'])
@@ -42,7 +58,6 @@ def addexpense():
         expensename = request.form['expensename']
         amount = request.form['amount']
         category = request.form['category']
-        print(date + ' ' + expensename + ' ' + amount + ' ' + category)
         expense = Expenses(date=date, name=expensename, amount=amount, category=category)
         db.session.add(expense)
         db.session.commit()
