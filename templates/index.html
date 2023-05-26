@@ -5,8 +5,31 @@
 {% endblock %}
 
 {% block main %}
-
+<div class="container">
+    <h3 class="mt-5">Expenses</h3>
     {% for expense in expenses %}
-        {{ expense.date }} -> {{ expense.name }} -> {{ expense.amount }} -> {{ expense.category }}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow mb-2 bg-white rounded">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">{{ expense.name }}</div>
+                        <div class="col-md-2">{{ expense.amount }}</div>
+                        <div class="col-md-2">{{ expense.date }}</div>
+                        <div class="col-md-2">
+                            <span class="badge bg-primary">{{ expense.category }}</span>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#" class="btn btn-sm btn-success">Edit</a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {% endfor %}
+</div>
 {% endblock %}

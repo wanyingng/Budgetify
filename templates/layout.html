@@ -15,11 +15,30 @@
     </head>
 
     <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">Budgetify</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">View Expenses</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/addexpense">Add Expenses</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
         <!-- <main class="container py-5 text-center"> -->
             {% block main %}{% endblock %}
         <!-- </main> -->
 
-        <footer class="mb-5 small text-center text-muted">
+        <footer class="mt-5 mb-5 small text-center text-muted">
             <p class="footer-heart">
                 Made with <g-emoji class="g-emoji" alias="heart"
                     fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
