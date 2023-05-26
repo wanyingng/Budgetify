@@ -51,7 +51,7 @@ def addexpense():
         return render_template('add.html')
 
 
-@app.route('/delete/<int:id>', methods=['GET', 'POST'])
+@app.route('/delete/<int:id>')
 def delete(id):
     """Delete an existing expense record"""
     # Retrieve the first entry that matches the specified id from the query
@@ -61,6 +61,30 @@ def delete(id):
     # Commit the changes to database
     db.session.commit()
     return redirect('/')
+
+
+@app.route('/edit/<int:id>', methods=['GET', 'POST'])
+def edit(id):
+    """Update an existing expense record"""
+    if request.method == "POST":
+        id = request.form['id']
+        date = request.form['date']
+        expensename = request.form['expensename']
+        amount = request.form['amount']
+        category = request.form['category']
+        # Assign the new properties retrieved from form to the properties of the expense object in database
+        expense = Expenses.query.filter_by(id=id).first()
+        expense.date = date
+        expense.name = expensename
+        expense.amount = amount
+        expense.category = category
+        # Commit the changes to database
+        db.session.commit()
+        return redirect('/')
+    else:
+        # Retrieve the first entry that matches the specified id from the query
+        expense = Expenses.query.filter_by(id=id).first()
+        return render_template('edit.html', expense=expense)
 
 
 if __name__ == '__main__':

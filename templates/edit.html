@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit Expense - Budgetify
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="mt-5">Edit expense</h3>
+                <form action="/edit/{{ expense.id }}" method="POST">
+                    <input type="hidden" value="{{ expense.id }}" name="id" id="">
+                    <div class="form-group">
+                        <label for="">Date</label>
+                        <input class="form-control" value="{{ expense.date }}" type="date" name="date" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Expense name</label>
+                        <input class="form-control" value="{{ expense.name }}" type="text" name="expensename" id="expensename">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Expense amount</label>
+                        <input class="form-control" value="{{ expense.amount }}" type="text" name="amount" id="amount">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="">Category</label>
+                        <select class="form-select" name="category" id="category">
+                            <option disabled selected>Please select a category</option>
+                            <option value="Food">Food</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Business">Business</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-danger" type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
