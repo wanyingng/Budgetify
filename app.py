@@ -51,5 +51,17 @@ def addexpense():
         return render_template('add.html')
 
 
+@app.route('/delete/<int:id>', methods=['GET', 'POST'])
+def delete(id):
+    """Delete an existing expense record"""
+    # Retrieve the first entry that matches the specified id from the query
+    expense = Expenses.query.filter_by(id=id).first()
+    # Delete the expense record in database
+    db.session.delete(expense)
+    # Commit the changes to database
+    db.session.commit()
+    return redirect('/')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
