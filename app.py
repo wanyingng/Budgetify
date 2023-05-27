@@ -1,12 +1,19 @@
+import os
+
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-import os
+
+from helpers import usd
+
 project_dir = os.path.dirname(os.path.abspath(__file__))
 database_file = "sqlite:///{}".format(os.path.join(project_dir, "budget.db"))
 
-
 # Create the app
 app = Flask(__name__)
+
+# Custom filter
+app.jinja_env.filters["usd"] = usd
+
 # Configure the SQLite database
 app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 # Create the extension

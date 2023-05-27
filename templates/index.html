@@ -7,6 +7,12 @@
 {% block main %}
 <div class="container">
     <h3 class="mt-5">Expenses</h3>
+    <div class="row text-muted">
+        <div class="col-md-2">Item</div>
+        <div class="col-md-2">Amount</div>
+        <div class="col-md-2">Date of Purchase</div>
+        <div class="col-md-2">Category</div>
+    </div>
     {% for expense in expenses %}
     <div class="row">
         <div class="col-md-12">
@@ -14,7 +20,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-2">{{ expense.name }}</div>
-                        <div class="col-md-2">{{ expense.amount }}</div>
+                        <div class="col-md-2">{{ expense.amount | usd }}</div>
                         <div class="col-md-2">{{ expense.date }}</div>
                         <div class="col-md-2">
                             <span class="badge bg-dark">{{ expense.category }}</span>
@@ -38,7 +44,7 @@
                 <div class="card-body">
                     <div class="row ms-2">
                         <div class="col-md-6">Food</div>
-                        <div id="tfood" class="col-md-6">{{ t_food }}</div>
+                        <div id="tfood" class="col-md-6">{{ t_food | usd }}</div>
                     </div>
                 </div>
             </div>
@@ -46,7 +52,7 @@
                 <div class="card-body">
                     <div class="row ms-2">
                         <div class="col-md-6">Entertainment</div>
-                        <div id="tentertainment" class="col-md-6">{{ t_entertainment }}</div>
+                        <div id="tentertainment" class="col-md-6">{{ t_entertainment | usd }}</div>
                     </div>
                 </div>
             </div>
@@ -54,7 +60,7 @@
                 <div class="card-body">
                     <div class="row ms-2">
                         <div class="col-md-6">Business</div>
-                        <div id="tbusiness" class="col-md-6">{{ t_business }}</div>
+                        <div id="tbusiness" class="col-md-6">{{ t_business | usd }}</div>
                     </div>
                 </div>
             </div>
@@ -62,7 +68,7 @@
                 <div class="card-body">
                     <div class="row ms-2">
                         <div class="col-md-6">Other</div>
-                        <div id="tother" class="col-md-6">{{ t_other }}</div>
+                        <div id="tother" class="col-md-6">{{ t_other | usd }}</div>
                     </div>
                 </div>
             </div>
@@ -70,7 +76,7 @@
                 <div class="card-body">
                     <div class="row ms-2">
                         <div class="col-md-6 fw-bold">TOTAL</div>
-                        <div class="col-md-6">{{ total }}</div>
+                        <div class="col-md-6">{{ total | usd }}</div>
                     </div>
                 </div>
             </div>
