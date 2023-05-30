@@ -7,26 +7,22 @@ document.querySelectorAll(".nav-link").forEach((link) => {
 });
 // End of Navbar
 
-// Pie Chart
-// Retrieve the value after gaining access to the relevant HTML tag
-let food = document.getElementById('tfood').innerHTML.replace('$', '')
-let entertainment = document.getElementById('tentertainment').innerHTML.replace('$', '')
-let business = document.getElementById('tbusiness').innerHTML.replace('$', '')
-let other = document.getElementById('tother').innerHTML.replace('$', '')
-let colors = [
-    '#ff80aa', '#99ffcc', '#99ffff', '#ffb3ec'
-];
-const ctx = document.getElementById('myChart');
-new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Food', 'Entertainment', 'Business', 'Other'],
-        datasets: [{
-            label: 'Amount (in dollars)',
-            data: [food, entertainment, business, other],
-            backgroundColor: colors,
-            borderWidth: 1
-        }]
+// Back to Top Button
+const scrollBtn = document.getElementById("btn-top")
+const onScroll = () => {
+    const scroll = document.documentElement.scrollTop
+    if (scroll > 220) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show")
     }
-});
-// End of Pie Chart
+};
+window.addEventListener('scroll', onScroll);
+// Scroll to top when button clicked
+const scrollWindow = function () {
+    if (window.scrollY != 0) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+};
+scrollBtn.addEventListener("click", scrollWindow);
+// End of Back to Top Button
