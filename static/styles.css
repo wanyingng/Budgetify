@@ -68,3 +68,25 @@ h2 {
         }
     }
 }
+
+/* Badge Colors */
+#fbadge {
+    color: #0e0620;
+    background-color: #ff80aa;
+}
+
+#ebadge {
+    color: #0e0620;
+    background-color: #99ffcc;
+}
+
+#bbadge {
+    color: #0e0620;
+    background-color: #99ffff;
+}
+
+#obadge {
+    color: #0e0620;
+    background-color: #ffb3ec;
+}
+/* End of Badge Colors */
