@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 
-from helpers import usd
+from helpers import error, usd
 
 project_dir = os.path.dirname(os.path.abspath(__file__))
 database_file = "sqlite:///{}".format(os.path.join(project_dir, "budget.db"))
@@ -64,7 +64,20 @@ def addexpense():
         date = request.form['date']
         expensename = request.form['expensename']
         amount = request.form['amount']
-        category = request.form['category']
+        category = request.form.get('category')
+        # Form fields validation
+        if not request.form.get("date"):
+            return error("Missing date", 400)
+        if not request.form.get("expensename"):
+            return error("Missing name", 400)
+        if not request.form.get("amount"):
+            return error("Missing amount", 400)
+        if not isinstance(request.form.get("amount", type=float), float):
+            return error("Invalid amount", 400)
+        if request.form.get("amount", type=float) < 0:
+            return error("Amount must be positive number", 400)
+        if not request.form.get("category"):
+            return error("Missing category", 400)
         expense = Expenses(date=date, name=expensename, amount=amount, category=category)
         db.session.add(expense)
         db.session.commit()
@@ -93,7 +106,20 @@ def edit(id):
         date = request.form['date']
         expensename = request.form['expensename']
         amount = request.form['amount']
-        category = request.form['category']
+        category = request.form.get('category')
+        # Form fields validation
+        if not request.form.get("date"):
+            return error("Missing date", 400)
+        if not request.form.get("expensename"):
+            return error("Missing name", 400)
+        if not request.form.get("amount"):
+            return error("Missing amount", 400)
+        if not isinstance(request.form.get("amount", type=float), float):
+            return error("Invalid amount", 400)
+        if request.form.get("amount", type=float) < 0:
+            return error("Amount must be positive number", 400)
+        if not request.form.get("category"):
+            return error("Missing category", 400)
         # Assign the new properties retrieved from form to the properties of the expense object in database
         expense = Expenses.query.filter_by(id=id).first()
         expense.date = date

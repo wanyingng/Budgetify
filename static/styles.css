@@ -11,3 +11,60 @@
   text-decoration: none;}
 
 .emoji{vertical-align: middle;}
+
+h1 {
+    font-size: 7.5em;
+    margin: 15px 0px;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+:root {
+  --black: #0e0620;
+  --white: #fff;
+}
+.btn-back {
+    z-index: 1;
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+    padding: 8px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    letter-spacing: 2px;
+    transition: 0.2s ease;
+    font-weight: bold;
+    margin: 5px 0px;
+
+    &.black {
+        border: 4px solid var(--black);
+        color: var(--black);
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--black);
+            z-index: -1;
+            transition: 0.2s ease;
+        }
+
+        &:hover {
+            color: var(--white);
+            background: var(--black);
+            transition: 0.2s ease;
+
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+}
