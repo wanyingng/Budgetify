@@ -11,7 +11,7 @@ document.querySelectorAll(".nav-link").forEach((link) => {
 const scrollBtn = document.getElementById("btn-top")
 const onScroll = () => {
     const scroll = document.documentElement.scrollTop
-    if (scroll > 220) {
+    if (scroll > 180) {
         scrollBtn.classList.add("show");
     } else {
         scrollBtn.classList.remove("show")
