@@ -74,7 +74,8 @@ def login():
         elif not request.form.get("password"):
             return error("Must provide password", 403)
         # Query database for username
-        rows = Users.query.filter_by(username=request.form.get("username")).all()
+        rows = Users.query.filter_by(
+            username=request.form.get("username")).all()
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0].hash, request.form.get("password")):
             return error("Invalid username and/or password", 403)
@@ -109,7 +110,8 @@ def register():
             return error("Missing username", 400)
         else:
             # Query database for username
-            rows = Users.query.filter_by(username=request.form.get("username")).all()
+            rows = Users.query.filter_by(
+                username=request.form.get("username")).all()
             # Ensure username does not already exists in database
             if len(rows) != 0:
                 return error("Username is not available", 400)
@@ -126,7 +128,8 @@ def register():
 
         # Insert the new user into users, storing a hash of the user's password; and
         # Remember which user has logged in by storing the returned user id in session
-        user = Users(username=request.form.get("username"), hash=generate_password_hash(request.form.get("confirmation")))
+        user = Users(username=request.form.get(
+            "username"), hash=generate_password_hash(request.form.get("confirmation")))
         db.session.add(user)
         db.session.commit()
         session["user_id"] = user.id
@@ -222,7 +225,8 @@ def addexpense():
             return error("Amount must be positive number", 400)
         if not request.form.get("category"):
             return error("Missing category", 400)
-        expense = Expenses(date=date, name=expensename, amount=amount, category=category, user_id=session["user_id"])
+        expense = Expenses(date=date, name=expensename, amount=amount,
+                           category=category, user_id=session["user_id"])
         db.session.add(expense)
         db.session.commit()
         # Flash message upon successful add
@@ -237,7 +241,8 @@ def addexpense():
 def delete(id):
     """Delete an existing expense record"""
     # Retrieve the first entry that matches the current session user id and the pecified id from the query
-    expense = Expenses.query.filter_by(user_id=session["user_id"], id=id).first()
+    expense = Expenses.query.filter_by(
+        user_id=session["user_id"], id=id).first()
     # Delete the expense record in database
     db.session.delete(expense)
     # Commit the changes to database
@@ -271,7 +276,8 @@ def edit(id):
         if not request.form.get("category"):
             return error("Missing category", 400)
         # Assign the new properties retrieved from form to the properties of the expense object in database
-        expense = Expenses.query.filter_by(user_id=session["user_id"], id=id).first()
+        expense = Expenses.query.filter_by(
+            user_id=session["user_id"], id=id).first()
         expense.date = date
         expense.name = expensename
         expense.amount = amount
@@ -283,7 +289,8 @@ def edit(id):
         return redirect('/')
     else:
         # Retrieve the first entry that matches the specified id from the query
-        expense = Expenses.query.filter_by(user_id=session["user_id"], id=id).first()
+        expense = Expenses.query.filter_by(
+            user_id=session["user_id"], id=id).first()
         return render_template('edit.html', expense=expense)
 
 

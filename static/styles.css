@@ -23,10 +23,12 @@ h2 {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
 :root {
   --black: #0e0620;
   --white: #fff;
 }
+
 .btn-back {
     z-index: 1;
     overflow: hidden;

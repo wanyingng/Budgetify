@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Expenses - Budgetify
+Expenses - Budgetify
 {% endblock %}
 
 {% block main %}
@@ -23,7 +23,10 @@
                         <div class="col-md-2">{{ expense.amount | usd }}</div>
                         <div class="col-md-2">{{ expense.date }}</div>
                         <div class="col-md-2">
-                            <span class="badge" {% if expense.category == 'Food' %}id="fbadge"{% endif %}{% if expense.category == 'Entertainment' %}id="ebadge"{% endif %}{% if expense.category == 'Business' %}id="bbadge"{% endif %}{% if expense.category == 'Other' %}id="obadge"{% endif %}>{{ expense.category }}</span>
+                            <span class="badge" {% if expense.category=='Food' %}id="fbadge" {% endif %}{% if
+                                expense.category=='Entertainment' %}id="ebadge" {% endif %}{% if
+                                expense.category=='Business' %}id="bbadge" {% endif %}{% if expense.category=='Other'
+                                %}id="obadge" {% endif %}>{{ expense.category }}</span>
                         </div>
                         <div class="col-md-2">
                             <a href="edit/{{ expense.id }}" class="btn btn-sm btn-success">Edit</a>
