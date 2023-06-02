@@ -203,6 +203,12 @@ def index():
     return render_template('index.html', expenses=expenses, total=total, t_food=t_food, t_entertainment=t_entertainment, t_business=t_business, t_other=t_other)
 
 
+@app.route('/about')
+def about():
+    """Display information about the app"""
+    return render_template('about.html')
+
+
 @app.route('/addexpense', methods=['GET', 'POST'])
 @login_required
 def addexpense():
