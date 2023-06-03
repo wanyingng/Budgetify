@@ -102,7 +102,7 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    pip install -r requirements.txt
    ```
-3. Run the application by executing the following command in the directory where app.py resides
+3. Run the application by executing the following command in the directory where app.py resides in
    ```sh
    flask run
    ```
