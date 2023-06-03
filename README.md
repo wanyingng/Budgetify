@@ -22,10 +22,10 @@
   <p align="center">
     Your personal finance companion.
     <br />
-    <a href="https://github.com/xlepotato/Budgetify"><strong>Explore the docs »</strong></a>
+    <a href="#about-the-project"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://budgetifyapp.pythonanywhere.com/">View Demo</a>
+    <a href="https://budgetifyapp.pythonanywhere.com/">View Live</a>
     ·
     <a href="https://github.com/xlepotato/Budgetify/issues">Report Bug</a>
     ·
@@ -52,7 +52,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -69,9 +68,6 @@
 Budgetify is an open-source, user-friendly, and intuitive budget-tracking app designed to help you take control of your personal finances. With Budgetify, you can easily add, update, and delete expenses, allowing you to monitor your spending habits and make informed decisions about your financial goals. The app automatically calculates your total expenses and provides a detailed breakdown of your spending by category, giving you valuable insights into where your money is going.
 
 Stay on top of your budget, save more, and achieve your financial goals with Budgetify, your personal finance companion!
-
-
-https://github.com/xlepotato/Budgetify/assets/22700895/a38615e4-53b8-4ec5-94f8-c78a17de791c
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,23 +114,11 @@ To get a local copy up and running follow these simple example steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The video below demonstrates each of the currently available features in Budgetify. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+https://github.com/xlepotato/Budgetify/assets/22700895/a38615e4-53b8-4ec5-94f8-c78a17de791c
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+_For more interactivity with the software, consider trying out the [App](https://budgetifyapp.pythonanywhere.com/) on your browser_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +145,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/xlepotato/Budgetify/blob/main/LICENSE) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -170,9 +154,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Flaticon](https://www.flaticon.com/)
+* [Free Stock Music](https://www.free-stock-music.com)
+* [PythonAnywhere](https://www.pythonanywhere.com/)
+* [Werkzeug]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,7 +174,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [issues-shield]: https://img.shields.io/github/issues/xlepotato/Budgetify.svg?style=for-the-badge
 [issues-url]: https://github.com/xlepotato/Budgetify/issues
 [license-shield]: https://img.shields.io/github/license/xlepotato/Budgetify.svg?style=for-the-badge
-[license-url]: https://github.com/xlepotato/Budgetify/blob/master/LICENSE.txt
+[license-url]: https://github.com/xlepotato/Budgetify/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: https://github.com/xlepotato/Budgetify/assets/22700895/a3ebf55c-03ed-466b-8cd6-baeb0967bfd9
