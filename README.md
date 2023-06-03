@@ -160,6 +160,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/xlepotato/Bu
 * [Open Broadcaster Software](https://obsproject.com/)
 * [PythonAnywhere](https://www.pythonanywhere.com/)
 * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.3.x/)
+* [SQLAlchemy ORM](https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
