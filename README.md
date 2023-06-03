@@ -154,10 +154,12 @@ Distributed under the MIT License. See [LICENSE](https://github.com/xlepotato/Bu
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
+* [Harvard University, CS50x 2023](https://cs50.harvard.edu/x/2023/)
 * [Flaticon](https://www.flaticon.com/)
 * [Free Stock Music](https://www.free-stock-music.com)
+* [Open Broadcaster Software](https://obsproject.com/)
 * [PythonAnywhere](https://www.pythonanywhere.com/)
-* [Werkzeug]()
+* [Werkzeug](https://werkzeug.palletsprojects.com/en/2.3.x/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
