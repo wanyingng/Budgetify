@@ -161,6 +161,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/xlepotato/Bu
 * [PythonAnywhere](https://www.pythonanywhere.com/)
 * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.3.x/)
 * [SQLAlchemy ORM](https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/)
+* [RegEx](https://docs.python.org/3/library/re.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
