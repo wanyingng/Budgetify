@@ -116,7 +116,7 @@ To get a local copy up and running follow these simple example steps.
 
 The video below demonstrates each of the currently available features in Budgetify. 
 
-https://github.com/xlepotato/Budgetify/assets/22700895/a38615e4-53b8-4ec5-94f8-c78a17de791c
+https://github.com/xlepotato/Budgetify/assets/22700895/1f5a76e9-0ad4-4e6d-9689-de2f48843813
 
 _For more interactivity with the software, consider trying out the [App](https://budgetifyapp.pythonanywhere.com/) on your browser_
 
@@ -161,6 +161,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/xlepotato/Bu
 * [PythonAnywhere](https://www.pythonanywhere.com/)
 * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.3.x/)
 * [SQLAlchemy ORM](https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/)
+* [RegEx](https://docs.python.org/3/library/re.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -180,7 +181,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/xlepotato/Bu
 [license-url]: https://github.com/xlepotato/Budgetify/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: https://github.com/xlepotato/Budgetify/assets/22700895/a3ebf55c-03ed-466b-8cd6-baeb0967bfd9
+[product-screenshot]: https://github.com/xlepotato/Budgetify/assets/22700895/eebe41b3-e2a8-45a9-972b-cf0e93feda62
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [SQLite.com]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
