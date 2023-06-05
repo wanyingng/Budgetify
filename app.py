@@ -246,7 +246,7 @@ def addexpense():
 @login_required
 def delete(id):
     """Delete an existing expense record"""
-    # Retrieve the first entry that matches the current session user id and the pecified id from the query
+    # Retrieve the first entry that matches the current session user id and the specified id from the query
     expense = Expenses.query.filter_by(
         user_id=session["user_id"], id=id).first()
     # Delete the expense record in database
